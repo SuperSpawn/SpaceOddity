@@ -1,0 +1,83 @@
+#include "pstates.h"
+
+SpriteState whaleState[nStates::NSTATES_NUMBER]
+{
+/*0*/	{ WHALE6,0.3, 0.3, WHALE_IDLE2, 0, 0, {1,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 0, false},
+/*1*/	{ WHALE7,0.3, 0.3, WHALE_IDLE1, 0, 0, {1,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 0, false},
+/*2*/	{ WHALE1,0.3, 0.3, WHALE_MOVE2, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false},	//move 1
+/*3*/	{ WHALE2,0.3, 0.3, WHALE_MOVE3, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false},	//move 2
+/*4*/	{ WHALE3,0.3, 0.3, WHALE_MOVE4, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false},	//move 3
+/*5*/	{ WHALE4,0.3, 0.3, WHALE_MOVE5, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false},	//move 4
+/*6*/	{ WHALE5,0.3, 0.3, WHALE_MOVE6, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false},	//move 5
+/*7*/	{ WHALE6,0.3, 0.3, WHALE_MOVE7, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false},	//move 6
+/*8*/	{ WHALE7,0.3, 0.3, WHALE_MOVE1, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false},	//move 7
+/*9*/	{ WHALE8,0.08, 0.08, WHALE_ROTATION2, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 0, false},	//rotate 1
+/*10*/	{ WHALE9,0.09, 0.09, WHALE_ROTATION3, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 0, false},	//rotate 2
+/*11*/	{ WHALE10,0.09, 0.09, WHALE_ROTATION1, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 0, false},	//rotate 3
+/*12*/	{ WHALE1,0.3, 0.3, WHALE_MOVE2, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false},
+/*13*/	{ WHALE1,0.3, 0.3, WHALE_MOVE2, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false},
+/*14*/	{ WHALE1,0.3, 0.3, WHALE_MOVE2, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false},
+/*15*/	{ WHALE1,0.3, 0.3, WHALE_MOVE2, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false},
+/*16*/	{ PARTIAL_WHALE_IDLE1,0.3, 0.3, PARTIAL_WHALE_IDLE2, 0, 0, {1,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 0, true},
+/*17*/	{ PARTIAL_WHALE_IDLE2,0.3, 0.3, PARTIAL_WHALE_IDLE1, 0, 0, {1,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 0, true},
+/*18*/	{ PARTIAL_WHALE_MOVE1,0.3, 0.3, PARTIAL_WHALE_MOVE2, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false},
+		{ PARTIAL_WHALE_MOVE2,0.3, 0.3, PARTIAL_WHALE_MOVE3, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false}, 
+		{ PARTIAL_WHALE_MOVE3,0.3, 0.3, PARTIAL_WHALE_MOVE4, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false}, 
+		{ PARTIAL_WHALE_MOVE4,0.3, 0.3, PARTIAL_WHALE_MOVE5, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false}, 
+		{ PARTIAL_WHALE_MOVE5,0.3, 0.3, PARTIAL_WHALE_MOVE6, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false}, 
+		{ PARTIAL_WHALE_MOVE6,0.3, 0.3, PARTIAL_WHALE_MOVE7, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false}, 
+		{ PARTIAL_WHALE_MOVE7,0.3, 0.3, PARTIAL_WHALE_MOVE1, 0, 0, {0,{NULL, NULL, NULL}, NULL, NULL, NULL, NULL}, 1, false}, 		
+		
+		
+		
+	
+		
+		
+};
+
+ssprite ssprites[] =
+{
+	{0,{{0,0}, {0,0}}},
+	{sprites::REGULAR_WHALE_SPRITE,{{11, 30}, {99, 29}}},	//WHALE1
+	{sprites::REGULAR_WHALE_SPRITE,{{12, 68}, {93, 31}}},	//WHALE2
+	{sprites::REGULAR_WHALE_SPRITE,{{11, 110}, {93, 31}}},	//WHALE3
+	{sprites::REGULAR_WHALE_SPRITE,{{9, 156}, {99, 28}}},	//WHALE4
+	{sprites::REGULAR_WHALE_SPRITE,{{9, 196}, {100, 30}}},	//WHALE5
+	{sprites::REGULAR_WHALE_SPRITE,{{10, 249}, {98, 30}}},	//WHALE6
+	{sprites::REGULAR_WHALE_SPRITE,{{11, 298}, {100, 30}}},	//WHALE7
+	{sprites::REGULAR_WHALE_SPRITE,{{166, 33}, {61, 29}}},	//WHALE8
+	{sprites::REGULAR_WHALE_SPRITE,{{182, 82}, {32, 31}}},	//WHALE9
+	{sprites::REGULAR_WHALE_SPRITE,{{170, 126}, {61, 29}}},	//WHALE10
+	{sprites::REGULAR_WHALE_SPRITE,{{157,221}, {100, 30}}},	//MOUTH1
+	{sprites::REGULAR_WHALE_SPRITE,{{152,281}, {100, 29}}},	//MOUTH2
+
+	{sprites::SINE_WHALE_SPRITE,{{11, 30}, {99, 29}}},	//WHALE1
+	{sprites::SINE_WHALE_SPRITE,{{12, 68}, {93, 31}}},	//WHALE2
+	{sprites::SINE_WHALE_SPRITE,{{11, 110}, {93, 31}}},	//WHALE3
+	{sprites::SINE_WHALE_SPRITE,{{9, 156}, {99, 28}}},	//WHALE4
+	{sprites::SINE_WHALE_SPRITE,{{9, 196}, {100, 30}}},	//WHALE5
+	{sprites::SINE_WHALE_SPRITE,{{10, 249}, {98, 30}}},	//WHALE6
+	{sprites::SINE_WHALE_SPRITE,{{11, 298}, {100, 30}}},	//WHALE7
+	{sprites::SINE_WHALE_SPRITE,{{166, 33}, {61, 29}}},	//WHALE8
+	{sprites::SINE_WHALE_SPRITE,{{182, 82}, {32, 31}}},	//WHALE9
+	{sprites::SINE_WHALE_SPRITE,{{170, 126}, {61, 29}}},	//WHALE10
+	{sprites::SINE_WHALE_SPRITE,{{157,221}, {100, 30}}},	//MOUTH1
+	{sprites::SINE_WHALE_SPRITE,{{152,281}, {100, 29}}},	//MOUTH2
+
+	{sprites::LINE_WHALE_SPRITE,{{11, 30}, {99, 29}}},	//WHALE1
+	{sprites::LINE_WHALE_SPRITE,{{12, 68}, {93, 31}}},	//WHALE2
+	{sprites::LINE_WHALE_SPRITE,{{11, 110}, {93, 31}}},	//WHALE3
+	{sprites::LINE_WHALE_SPRITE,{{9, 156}, {99, 28}}},	//WHALE4
+	{sprites::LINE_WHALE_SPRITE,{{9, 196}, {100, 30}}},	//WHALE5
+	{sprites::LINE_WHALE_SPRITE,{{10, 249}, {98, 30}}},	//WHALE6
+	{sprites::LINE_WHALE_SPRITE,{{11, 298}, {100, 30}}},	//WHALE7
+	{sprites::LINE_WHALE_SPRITE,{{166, 33}, {61, 29}}},	//WHALE8
+	{sprites::LINE_WHALE_SPRITE,{{182, 82}, {32, 31}}},	//WHALE9
+	{sprites::LINE_WHALE_SPRITE,{{170, 126}, {61, 29}}},	//WHALE10
+	{sprites::LINE_WHALE_SPRITE,{{157,221}, {100, 30}}},	//MOUTH1
+	{sprites::LINE_WHALE_SPRITE,{{152,281}, {100, 29}}},	//MOUTH2
+
+
+};
+
+
